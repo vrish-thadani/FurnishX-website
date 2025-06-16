@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | FurnishX</title>
+  <link rel="stylesheet" href="ppf.css" />
+</head>
+<body>
+
+  <header class="header-top">
+    <div class="logo">
+      <a href="furnishx.html"><img src="logo.svg" alt="FurnishX Logo"></a>
+    </div>
+    <h1>Contact Us</h1>
+  </header>
+
+  <main class="contact-section">
+    <div class="contact-info">
+      <p><strong>Email:</strong> support@furnishx.in</p>
+      <p><strong>Phone:</strong> +91 22 1234 5678</p>
+      <p><strong>WhatsApp:</strong> +91 98765 43210</p>
+    </div>
+    <form class="contact-form">
+      <label for="contact-name">Name:</label>
+      <input type="text" id="contact-name" required />
+
+      <label for="contact-email">Email:</label>
+      <input type="email" id="contact-email" required />
+
+      <label for="contact-message">Message:</label>
+      <textarea id="contact-message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="contact-success" style="display: none;">Thank you! We’ll get back to you soon.</div>
+  </main>
+
+  <script>
+    const contactForm = document.querySelector('.contact-form');
+    const contactSuccess = document.getElementById('contact-success');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      contactForm.reset();
+      contactSuccess.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

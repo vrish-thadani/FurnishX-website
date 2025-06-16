@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Products | FurnishHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ppf.css">
+</head>
+<body data-theme="light">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>FurnishHub</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="products.html">Home</a></li>
+                    <li><a href="products.html?category=sofa" target="_blank">Sofas</a></li>
+                    <li><a href="products.html?category=bed" target="_blank">Beds</a></li>
+                    <li><a href="products.html?category=dining" target="_blank">Dining</a></li>
+                    <li><a href="products.html?category=storage" target="_blank">Storage</a></li>
+                    <li><a href="products.html?category=decor" target="_blank">Decor</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="theme-toggle">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+                <button class="wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </button>
+                <button class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="account">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="products-header">
+            <h2 id="category-title">All Products</h2>
+        <script>
+            const sortFilter = document.getElementById('category-sort');
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('category') && sortFilter) {
+                sortFilter.style.display = 'block';
+            }
+        </script>
+        </div>
+
+        <div id="product-grid" class="product-grid">
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart" class="close-sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="cart-items" class="sidebar-content">
+        </div>
+        <div class="sidebar-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div id="wishlist-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>Your Wishlist</h3>
+            <button id="close-wishlist" class="close-sidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="wishlist-items" class="sidebar-content">
+        </div>
+    </div>
+
+    <!-- Figma Login Preview Modal -->
+    <div id="figma-preview" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-figma">&times;</span>
+        <img src="LOGIN PAGE.svg" alt="Login UI Design" style="width: 100%; max-width: 600px;" />
+      </div>
+    </div>
+
+    <script src="product.js"></script>
+    <script src="ppf.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get("category");
+
+      document.addEventListener("DOMContentLoaded", () => {
+        if (category && typeof filterProductsByCategory === "function") {
+          const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+          document.getElementById("category-title").textContent = formattedCategory;
+          filterProductsByCategory(category);
+        } else {
+          renderProducts(products, false); 
+        }
+      });
+    </script>
+    <script>
+      const accountBtn = document.querySelector('.account');
+      const figmaPreview = document.getElementById('figma-preview');
+      const closeFigma = document.querySelector('.close-figma');
+
+      if (accountBtn && figmaPreview && closeFigma) {
+        accountBtn.addEventListener('click', () => {
+          figmaPreview.style.display = 'flex';
+        });
+
+        closeFigma.addEventListener('click', () => {
+          figmaPreview.style.display = 'none';
+        });
+      }
+    </script>
+</body>
+</html>

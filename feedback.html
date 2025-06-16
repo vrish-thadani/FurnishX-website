@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Feedback | FurnitureFry</title>
+  <link rel="stylesheet" href="ppf.css" /> 
+</head>
+<body>
+
+  <header class="header-top">
+    <div class="logo">
+      <a href="index.html"><img src="logo.svg" alt="FurnishX Logo"></a>
+    </div>
+    <h1>Customer Feedback</h1>
+  </header>
+
+  <main class="feedback-section">
+    <form class="feedback-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="message">Your Feedback:</label>
+      <textarea id="message" rows="5" required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <div id="feedback-success" style="display: none;">Thank you for your feedback!</div>
+  </main>
+
+  <script>
+    const form = document.querySelector('.feedback-form');
+    const successMessage = document.getElementById('feedback-success');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.reset();
+      successMessage.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurnishX - India's Largest Furniture Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ppf.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span>✨ Free Shipping Across India</span>
+                    <span>🎉 20% Off on First Purchase</span>
+                    <span>🔥 Summer Sale Live Now</span>
+                    <span>🚚 Express Delivery Available</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header-top">
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search for furniture..." />
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="search-message" style="color: #e63946; font-size: 14px; margin-top: 5px;"></div>
+      
+        <div class="header-actions">
+          <div class="logo">
+            <h1>
+                <div class="logo">
+                    <img src="logo.svg" alt="FurnishX" />
+                  </div>
+              </h1>
+          </div>
+          <div class="header">
+            <div class="theme-toggle">
+              <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <div class="wishlist icon-with-count">
+              <i class="fas fa-heart"></i>
+              <span class="wishlist-count">0</span>
+            </div>
+            <div class="cart icon-with-count">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="login-bar">
+          <div class="login-link">
+            <i class="fas fa-user"></i>
+            <span>Login/Signup</span>
+          </div>
+        </div>
+      </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="products.html">Home</a></li>
+                    <li><a href="#" data-category="sofas">Sofas</a></li>
+                    <li><a href="#" data-category="beds">Beds</a></li>
+                    <li><a href="#" data-category="dining">Dining</a></li>
+                    <li><a href="#" data-category="storage">Storage</a></li>
+                    <li><a href="#" data-category="decor">Decor</a></li>
+                    <li><a href="#" data-category="lighting">Lighting</a></li>
+                    <li><a href="feedback.html">Customer Feedback</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="main-banner">
+        <div class="banner-content">
+            <h2>Summer Collection 2025</h2>
+            <p>Up to 40% off on selected items</p>
+            <button class="btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="sofas">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sofas">
+                    <h3>Sofas</h3>
+                </div>
+                <div class="category-card" data-category="beds">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Beds">
+                    <h3>Beds</h3>
+                </div>
+                <div class="category-card" data-category="dining">
+                    <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Dining">
+                    <h3>Dining</h3>
+                </div>
+                <div class="category-card" data-category="storage">
+                    <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Storage">
+                    <h3>Storage</h3>
+                </div>
+                <div class="category-card" data-category="decor">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Decor">
+                    <h3>Decor</h3>
+                </div>
+                <div class="category-card" data-category="lighting">
+                    <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Lighting">
+                    <h3>Lighting</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Most Popular Products</h2>
+                <div class="sort-options">
+                    <label for="sort">Sort by</label>
+                    <select id="sort">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+            </div>
+            <div class="price-filter">
+                <label for="price-slider">Max Price: ₹<span id="price-slider-val">100000</span></label>
+                <input type="range" id="price-slider" min="0" max="100000" step="1000" value="100000" />
+                <button id="reset-price-filter">Reset</button>
+              </div>
+            <div class="product-grid" id="product-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Feature: Color Style Finder -->
+    <section class="color-finder">
+        <div class="container">
+            <h2 class="section-title">Find Your Color Style</h2>
+            <p>Discover furniture that matches your color personality</p>
+            <div class="color-options">
+                <div class="color-option" data-color="neutral">
+                    <div class="color-box" style="background: #f5f5f5;"></div>
+                    <span>Neutral</span>
+                </div>
+                <div class="color-option" data-color="warm">
+                    <div class="color-box" style="background: #ffb347;"></div>
+                    <span>Warm</span>
+                </div>
+                <div class="color-option" data-color="cool">
+                    <div class="color-box" style="background: #77b5fe;"></div>
+                    <span>Cool</span>
+                </div>
+                <div class="color-option" data-color="bold">
+                    <div class="color-box" style="background: #ff6b6b;"></div>
+                    <span>Bold</span>
+                </div>
+                <div class="color-option" data-color="earthy">
+                    <div class="color-box" style="background: #d4a59a;"></div>
+                    <span>Earthy</span>
+                </div>
+            </div>
+            <button class="btn" id="find-style-btn">Find My Style</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="https://example.com/contact-us" target="_blank">Contact Us</a></li>
+                        <li><a href="https://example.com/faqs" target="_blank">FAQs</a></li>
+                        <li><a href="https://example.com/track-order" target="_blank">Track Your Order</a></li>
+                        <li><a href="https://example.com/returns" target="_blank">Returns & Refunds</a></li>
+                        <li><a href="https://example.com/cancellation-policy" target="_blank">Cancellation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About FurnishX</h3>
+                    <ul>
+                        <li><a href="https://example.com/about" target="_blank">Our Story</a></li>
+                        <li><a href="https://example.com/careers" target="_blank">Careers</a></li>
+                        <li><a href="https://example.com/blog" target="_blank">Blog</a></li>
+                        <li><a href="https://example.com/press" target="_blank">Press</a></li>
+                        <li><a href="https://example.com/business" target="_blank">Corporate Enquiries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Policy</h3>
+                    <ul>
+                        <li><a href="https://example.com/privacy-policy" target="_blank">Privacy Policy</a></li>
+                        <li><a href="https://example.com/terms" target="_blank">Terms of Use</a></li>
+                        <li><a href="https://example.com/security" target="_blank">Security</a></li>
+                        <li><a href="https://example.com/sitemap" target="_blank">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/login" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/accounts/login" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/login" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/login" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.pinterest.com/login" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                    <h3>Payment Methods</h3>
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fas fa-wallet"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-university"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FurnishX. All Rights Reserved.</p>
+                <p>Free Shipping Across India | 20% Off on First Purchase</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+        </div>
+        <div class="cart-total">
+            <p>Total: <span id="cart-total">₹0</span></p>
+            <button class="btn checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlist-sidebar">
+        <div class="wishlist-header">
+            <h3>Your Wishlist</h3>
+            <button class="close-wishlist" id="close-wishlist">&times;</button>
+        </div>
+        <div class="wishlist-items" id="wishlist-items">
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+
+    <!-- Login Sidebar -->
+    <div class="login-sidebar" id="login-sidebar">
+      <div class="login-header">
+        <h3>Login Preview</h3>
+        <button class="close-login" id="close-login">&times;</button>
+      </div>
+      <div class="login-image">
+        <img src="Frame 1.svg" alt="Login Preview" />
+      </div>
+    </div>
+
+    <script src="product.js"></script>
+    <script src="ppf.js"></script>
+
+</script>
+    <div id="login-overlay" class="login-overlay" style="display: none;"></div>
+</body>
+</html>
